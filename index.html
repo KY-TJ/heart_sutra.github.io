@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>心经全文</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+        .pinyin {
+            color: blue;
+            position: absolute; /* 设置为绝对定位 */
+            top: -20px; /* 调整拼音的上方偏移量 */
+            left: 50%; /* 将拼音水平居中 */
+            transform: translateX(-50%); /* 将拼音水平居中 */
+            display: block; /* 默认隐藏拼音 */
+            font-size: 18px; /* 调整拼音的字号 */
+        }
+        .hanzi {
+            color: rgb(250, 65, 19);
+            display: inline-block;
+            position: relative; /* 设置相对定位 */
+            margin: 6px;
+            font-size: 33px; /* 例如：设置为 16 像素 */
+            line-height: 2.5; /* 设置行间距为字体大小的1.2倍 */
+        }
+        .hanzi:hover .pinyin { /* 当鼠标悬停在汉字上时显示拼音 */
+            display: block;
+        }
+        .commentary {
+            color: green;
+            display: block; /* 注释默认隐藏 */
+            font-size: 20px; /* 例如：设置为 16 像素 */
+            text-align: left;
+
+        }
+        .hidden {
+            display: none; /* 隐藏元素的样式 */
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button id="togglePinyin">拼音</button>
+        <button id="toggleCommentary">注释</button>
+    </div>
+
+    <div class="container">
+
+        <div class="line">
+            <span class="hanzi" data-pinyin="bō">般</span>
+            <span class="hanzi" data-pinyin="rě">若</span>
+            <span class="hanzi" data-pinyin="bō">波</span>
+            <span class="hanzi" data-pinyin="luó">罗</span>
+            <span class="hanzi" data-pinyin="mì">蜜</span>
+            <span class="hanzi" data-pinyin="duō">多</span>
+            <span class="hanzi" data-pinyin="xīn">心</span>
+            <span class="hanzi" data-pinyin="jīng">经</span>
+        </div>
+        <div class="commentary hidden">注释</div>
+        <div class="line">
+
+            <span class="hanzi" data-pinyin="guān">观</span>
+            
+            <span class="hanzi" data-pinyin="zì">自</span>
+            
+            <span class="hanzi" data-pinyin="zài">在</span>
+            
+            <span class="hanzi" data-pinyin="pú">菩</span>
+            
+            <span class="hanzi" data-pinyin="sà">萨</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="xíng">行</span>
+            
+            <span class="hanzi" data-pinyin="shēn">深</span>
+            
+            <span class="hanzi" data-pinyin="bō">般</span>
+            
+            <span class="hanzi" data-pinyin="rě">若</span>
+            
+            <span class="hanzi" data-pinyin="bō">波</span>
+            
+            <span class="hanzi" data-pinyin="luó">罗</span>
+            
+            <span class="hanzi" data-pinyin="mì">蜜</span>
+            
+            <span class="hanzi" data-pinyin="duō">多</span>
+            
+            <span class="hanzi" data-pinyin="shí">时</span>
+            <span class="pinyin">，</span>
+            
+            <span class="hanzi" data-pinyin="zhào">照</span>
+            
+            <span class="hanzi" data-pinyin="jiàn">见</span>
+            
+            <span class="hanzi" data-pinyin="wǔ">五</span>
+            
+            <span class="hanzi" data-pinyin="yùn">蕴</span>
+            
+            <span class="hanzi" data-pinyin="jiē">皆</span>
+            
+            <span class="hanzi" data-pinyin="kōng">空</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="dù">度</span>
+            
+            <span class="hanzi" data-pinyin="yī">一</span>
+            
+            <span class="hanzi" data-pinyin="qiē">切</span>
+            
+            <span class="hanzi" data-pinyin="kǔ">苦</span>
+            
+            <span class="hanzi" data-pinyin="è">厄</span>
+            <span class="pinyin">。</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="shè">舍</span>
+            
+            <span class="hanzi" data-pinyin="lì">利</span>
+            
+            <span class="hanzi" data-pinyin="zǐ">子</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="sè">色</span>
+            
+            <span class="hanzi" data-pinyin="bù">不</span>
+            
+            <span class="hanzi" data-pinyin="yì">异</span>
+            
+            <span class="hanzi" data-pinyin="kōng">空</span>
+            <span class="pinyin">，</span>
+            
+            <span class="hanzi" data-pinyin="kōng">空</span>
+            
+            <span class="hanzi" data-pinyin="bù">不</span>
+            
+            <span class="hanzi" data-pinyin="yì">异</span>
+            
+            <span class="hanzi" data-pinyin="sè">色</span>
+            <span class="pinyin">，</span>
+            
+            <span class="hanzi" data-pinyin="sè">色</span>
+            
+            <span class="hanzi" data-pinyin="jí">即</span>
+            
+            <span class="hanzi" data-pinyin="shì">是</span>
+            
+            <span class="hanzi" data-pinyin="kōng">空</span>
+            <span class="pinyin">，</span>
+            
+            <span class="hanzi" data-pinyin="kōng">空</span>
+            
+            <span class="hanzi" data-pinyin="jí">即</span>
+            
+            <span class="hanzi" data-pinyin="shì">是</span>
+            
+            <span class="hanzi" data-pinyin="sè">色</span>
+            <span class="pinyin">。</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="shòu">受</span>
+            
+            <span class="hanzi" data-pinyin="xiǎng">想</span>
+            
+            <span class="hanzi" data-pinyin="xíng">行</span>
+            
+            <span class="hanzi" data-pinyin="shí">识</span>
+            <span class="pinyin">，</span>
+            
+            <span class="hanzi" data-pinyin="yì">亦</span>
+            
+            <span class="hanzi" data-pinyin="fù">复</span>
+            
+            <span class="hanzi" data-pinyin="rú">如</span>
+            
+            <span class="hanzi" data-pinyin="shì">是</span>
+            <span class="pinyin">。</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="shè">舍</span>
+            
+            <span class="hanzi" data-pinyin="lì">利</span>
+            
+            <span class="hanzi" data-pinyin="zǐ">子</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="shì">是</span>
+            
+            <span class="hanzi" data-pinyin="zhū">诸</span>
+            
+            <span class="hanzi" data-pinyin="fǎ">法</span>
+            
+            <span class="hanzi" data-pinyin="kōng">空</span>
+            
+            <span class="hanzi" data-pinyin="xiāng">相</span>
+            <span class="pinyin">，</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="bù">不</span>
+            
+            <span class="hanzi" data-pinyin="shēng">生</span>
+            
+            <span class="hanzi" data-pinyin="bù">不</span>
+            
+            <span class="hanzi" data-pinyin="miè">灭</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="bù">不</span>
+            
+            <span class="hanzi" data-pinyin="gòu">垢</span>
+            
+            <span class="hanzi" data-pinyin="bù">不</span>
+            
+            <span class="hanzi" data-pinyin="jìng">净</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="bù">不</span>
+            
+            <span class="hanzi" data-pinyin="zēng">增</span>
+            
+            <span class="hanzi" data-pinyin="bù">不</span>
+            
+            <span class="hanzi" data-pinyin="jiǎn">减</span>
+            <span class="pinyin">，</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="shì">是</span>
+            
+            <span class="hanzi" data-pinyin="gù">故</span>
+            
+            <span class="hanzi" data-pinyin="kōng">空</span>
+            
+            <span class="hanzi" data-pinyin="zhōng">中</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="sè">色</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="shòu">受</span>
+            
+            <span class="hanzi" data-pinyin="xiǎng">想</span>
+            
+            <span class="hanzi" data-pinyin="xíng">行</span>
+            
+            <span class="hanzi" data-pinyin="shí">识</span>
+            <span class="pinyin">，</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="yǎn">眼</span>
+            
+            <span class="hanzi" data-pinyin="ěr">耳</span>
+            
+            <span class="hanzi" data-pinyin="bí">鼻</span>
+            
+            <span class="hanzi" data-pinyin="shé">舌</span>
+            
+            <span class="hanzi" data-pinyin="shēn">身</span>
+            
+            <span class="hanzi" data-pinyin="yì">意</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="sè">色</span>
+            
+            <span class="hanzi" data-pinyin="shēng">声</span>
+            
+            <span class="hanzi" data-pinyin="xiāng">香</span>
+            
+            <span class="hanzi" data-pinyin="wèi">味</span>
+            
+            <span class="hanzi" data-pinyin="chù">触</span>
+            
+            <span class="hanzi" data-pinyin="fǎ">法</span>
+            <span class="pinyin">,</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="yǎn">眼</span>
+            
+            <span class="hanzi" data-pinyin="ěr">耳</span>
+            
+            <span class="hanzi" data-pinyin="bí">鼻</span>
+            
+            <span class="hanzi" data-pinyin="shé">舌</span>
+            
+            <span class="hanzi" data-pinyin="shēn">身</span>
+            
+            <span class="hanzi" data-pinyin="yì">意</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="sè">色</span>
+            
+            <span class="hanzi" data-pinyin="shēng">声</span>
+            
+            <span class="hanzi" data-pinyin="xiāng">香</span>
+            
+            <span class="hanzi" data-pinyin="wèi">味</span>
+            
+            <span class="hanzi" data-pinyin="chù">触</span>
+            
+            <span class="hanzi" data-pinyin="fǎ">法</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="yǎn">眼</span>
+            
+            <span class="hanzi" data-pinyin="jiè">界</span>
+            <span class="pinyin">，</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="nǎi">乃</span>
+            
+            <span class="hanzi" data-pinyin="zhì">至</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="yì">意</span>
+            
+            <span class="hanzi" data-pinyin="shí">识</span>
+            
+            <span class="hanzi" data-pinyin="jiè">界</span>
+            <span class="pinyin">，</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="míng">明</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="yì">亦</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="míng">明</span>
+            
+            <span class="hanzi" data-pinyin="jìn">尽</span>
+            <span class="pinyin">。</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="nǎi">乃</span>
+            
+            <span class="hanzi" data-pinyin="zhì">至</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="lǎo">老</span>
+            
+            <span class="hanzi" data-pinyin="sǐ">死</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="yì">亦</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="lǎo">老</span>
+            
+            <span class="hanzi" data-pinyin="sǐ">死</span>
+            
+            <span class="hanzi" data-pinyin="jìn">尽</span>
+            <span class="pinyin">。</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="kǔ">苦</span>
+            
+            <span class="hanzi" data-pinyin="jí">集</span>
+            
+            <span class="hanzi" data-pinyin="miè">灭</span>
+            
+            <span class="hanzi" data-pinyin="dào">道</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="zhì">智</span>
+            
+            <span class="hanzi" data-pinyin="yì">亦</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="dé">得</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="yǐ">以</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="suǒ">所</span>
+            
+            <span class="hanzi" data-pinyin="dé">得</span>
+            
+            <span class="hanzi" data-pinyin="gù">故</span>
+            <span class="pinyin">。</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="pú">菩</span>
+            
+            <span class="hanzi" data-pinyin="tí">提</span>
+            
+            <span class="hanzi" data-pinyin="sà">萨</span>
+            
+            <span class="hanzi" data-pinyin="duǒ">埵</span>
+            
+            <span class="hanzi" data-pinyin="yī">依</span>
+            
+            <span class="hanzi" data-pinyin="bō">般</span>
+            
+            <span class="hanzi" data-pinyin="rě">若</span>
+            
+            <span class="hanzi" data-pinyin="bō">般</span>
+            
+            <span class="hanzi" data-pinyin="luó">罗</span>
+            
+            <span class="hanzi" data-pinyin="mì">蜜</span>
+            
+            <span class="hanzi" data-pinyin="duō">多</span>
+            
+            <span class="hanzi" data-pinyin="gù">故</span>
+            
+            <span class="hanzi" data-pinyin="xīn">心</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="guà">挂</span>
+            
+            <span class="hanzi" data-pinyin="ài">碍</span>
+            <span class="pinyin">。</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="guà">挂</span>
+            
+            <span class="hanzi" data-pinyin="ài">碍</span>
+            
+            <span class="hanzi" data-pinyin="gù">故</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="yǒu">有</span>
+            
+            <span class="hanzi" data-pinyin="kǒng">恐</span>
+            
+            <span class="hanzi" data-pinyin="bù">怖</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="yuǎn">远</span>
+            
+            <span class="hanzi" data-pinyin="lí">离</span>
+            
+            <span class="hanzi" data-pinyin="diān">颠</span>
+            
+            <span class="hanzi" data-pinyin="dǎo">倒</span>
+            
+            <span class="hanzi" data-pinyin="mèng">梦</span>
+            
+            <span class="hanzi" data-pinyin="xiǎng">想</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="jiū">究</span>
+            
+            <span class="hanzi" data-pinyin="jìng">竟</span>
+            
+            <span class="hanzi" data-pinyin="niè">涅</span>
+            
+            <span class="hanzi" data-pinyin="pán">槃</span>
+            <span class="pinyin">。</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="sān">三</span>
+            
+            <span class="hanzi" data-pinyin="shì">世</span>
+            
+            <span class="hanzi" data-pinyin="zhū">佛</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="yī">依</span>
+            
+            <span class="hanzi" data-pinyin="bō">般</span>
+            
+            <span class="hanzi" data-pinyin="rě">若</span>
+            
+            <span class="hanzi" data-pinyin="bō">般</span>
+            
+            <span class="hanzi" data-pinyin="luó">罗</span>
+            
+            <span class="hanzi" data-pinyin="mì">蜜</span>
+            
+            <span class="hanzi" data-pinyin="duō">多</span>
+            
+            <span class="hanzi" data-pinyin="gù">故</span>
+            
+            <span class="hanzi" data-pinyin="dé">得</span>
+            
+            <span class="hanzi" data-pinyin="ā">阿</span>
+            
+            <span class="hanzi" data-pinyin="nuò">耨</span>
+            
+            <span class="hanzi" data-pinyin="duō">多</span>
+            
+            <span class="hanzi" data-pinyin="luó">罗</span>
+            
+            <span class="hanzi" data-pinyin="sān">三</span>
+            
+            <span class="hanzi" data-pinyin="miǎo">藐</span>
+            
+            <span class="hanzi" data-pinyin="sān">三</span>
+            
+            <span class="hanzi" data-pinyin="pú">菩</span>
+            
+            <span class="hanzi" data-pinyin="tí">提</span>
+            <span class="pinyin">。</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="gù">故</span>
+            
+            <span class="hanzi" data-pinyin="zhī">知</span>
+            
+            <span class="hanzi" data-pinyin="bō">般</span>
+            
+            <span class="hanzi" data-pinyin="rě">若</span>
+            
+            <span class="hanzi" data-pinyin="bō">般</span>
+            
+            <span class="hanzi" data-pinyin="luó">罗</span>
+            
+            <span class="hanzi" data-pinyin="mì">蜜</span>
+            
+            <span class="hanzi" data-pinyin="duō">多</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="shì">是</span>
+            
+            <span class="hanzi" data-pinyin="dà">大</span>
+            
+            <span class="hanzi" data-pinyin="shén">神</span>
+            
+            <span class="hanzi" data-pinyin="zhòu">咒</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="shì">是</span>
+            
+            <span class="hanzi" data-pinyin="dà">大</span>
+            
+            <span class="hanzi" data-pinyin="míng">明</span>
+            
+            <span class="hanzi" data-pinyin="zhòu">咒</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="shì">是</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="shàng">上</span>
+            
+            <span class="hanzi" data-pinyin="zhòu">咒</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="shì">是</span>
+            
+            <span class="hanzi" data-pinyin="wú">无</span>
+            
+            <span class="hanzi" data-pinyin="děng">等</span>
+            
+            <span class="hanzi" data-pinyin="děng">等</span>
+            
+            <span class="hanzi" data-pinyin="zhòu">咒</span>
+            <span class="pinyin">。</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="néng">能</span>
+            
+            <span class="hanzi" data-pinyin="chú">除</span>
+            
+            <span class="hanzi" data-pinyin="yī">一</span>
+            
+            <span class="hanzi" data-pinyin="qiē">切</span>
+            
+            <span class="hanzi" data-pinyin="kǔ">苦</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="zhēn">真</span>
+            
+            <span class="hanzi" data-pinyin="shí">实</span>
+            
+            <span class="hanzi" data-pinyin="bù">不</span>
+            
+            <span class="hanzi" data-pinyin="xū">虚</span>
+            <span class="pinyin">。</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="gù">故</span>
+            
+            <span class="hanzi" data-pinyin="shuō">说</span>
+            
+            <span class="hanzi" data-pinyin="bō">般</span>
+            
+            <span class="hanzi" data-pinyin="rě">若</span>
+            
+            <span class="hanzi" data-pinyin="bō">般</span>
+            
+            <span class="hanzi" data-pinyin="luó">罗</span>
+            
+            <span class="hanzi" data-pinyin="mì">蜜</span>
+            
+            <span class="hanzi" data-pinyin="duō">多</span>
+            
+            <span class="hanzi" data-pinyin="zhòu">咒</span>
+            <span class="pinyin">。</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="jí">即</span>
+            
+            <span class="hanzi" data-pinyin="shuō">说</span>
+            
+            <span class="hanzi" data-pinyin="zhòu">咒</span>
+            
+            <span class="hanzi" data-pinyin="yuē">曰</span>
+            <span class="pinyin">：</span>
+            </div>
+            <div class="commentary">注释</div>
+            <div class="line">
+            
+            <span class="hanzi" data-pinyin="jiē">揭</span>
+            
+            <span class="hanzi" data-pinyin="dì">谛</span>
+            
+            <span class="hanzi" data-pinyin="jiē">揭</span>
+            
+            <span class="hanzi" data-pinyin="dì">谛</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="bō">般</span>
+            
+            <span class="hanzi" data-pinyin="luó">罗</span>
+            
+            <span class="hanzi" data-pinyin="jiē">揭</span>
+            
+            <span class="hanzi" data-pinyin="dì">谛</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="bō">般</span>
+            
+            <span class="hanzi" data-pinyin="luó">罗</span>
+            
+            <span class="hanzi" data-pinyin="sēng">僧</span>
+            
+            <span class="hanzi" data-pinyin="jiē">揭</span>
+            
+            <span class="hanzi" data-pinyin="dì">谛</span>
+            <span class="pinyin">,</span>
+            
+            <span class="hanzi" data-pinyin="pú">菩</span>
+            
+            <span class="hanzi" data-pinyin="tí">提</span>
+            
+            <span class="hanzi" data-pinyin="sà">婆</span>
+            
+            <span class="hanzi" data-pinyin="hē">诃</span>
+            <span class="pinyin">。</span>
+            </div>
+            <div class="commentary">注释</div>
+    </div>
+
+    <script>
+        document.getElementById('togglePinyin').addEventListener('click', function() {
+            var pinyins = document.querySelectorAll('.pinyin');
+            for(var i = 0; i < pinyins.length; i++) {
+                pinyins[i].classList.toggle('hidden');
+            }
+        });
+
+        document.getElementById('toggleCommentary').addEventListener('click', function() {
+            var commentaries = document.querySelectorAll('.commentary');
+            for(var i = 0; i < commentaries.length; i++) {
+                commentaries[i].classList.toggle('hidden');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var hanziElements = document.querySelectorAll('.hanzi');
+            hanziElements.forEach(function(element) {
+                var pinyin = element.getAttribute('data-pinyin');
+                var pinyinSpan = document.createElement('span');
+                pinyinSpan.classList.add('pinyin', 'hidden');
+                pinyinSpan.textContent = pinyin;
+                element.appendChild(pinyinSpan); // 添加拼音span到汉字元素中
+            });
+            var commentaryElements = document.querySelectorAll('.commentary');
+            commentaryElements.forEach(function(element) {
+                element.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
